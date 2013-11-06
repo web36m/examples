@@ -15,3 +15,29 @@ sublime text
 	"theme": "Soda Dark.sublime-theme"
 }
 ```
+### PHP DEBUG    
+```sh
+apt-get install php5-xdebug
+nano /etc/php5/conf.d/xdebug.ini
+```
+insert config into xdebug.ini    
+```
+xdebug.max_nesting_level=1000 ; the default nesting level of 100 isn't very mediawiki friendly
+xdebug.show_mem_delta=1
+xdebug.collect_params=4
+xdebug.dump_globals=on
+xdebug.collect_vars=on
+xdebug.show_local_vars=on
+xdebug.collect_includes=1
+xdebug.dump.REQUEST=*
+xdebug.dump.SESSION=*
+xdebug.dump.SERVER=REMOTE_ADDR,REQUEST_METHOD
+xdebug.dump_globals=1
+xdebug.manual_url=http://www.php.su/functions/?
+xdebug.show_exception_trace=1
+xdebug.auto_trace=1
+xdebug.collect_assignments=1
+xdebug.collect_return=1
+xdebug.trace_format=1
+xdebug.extended_info=1
+```
