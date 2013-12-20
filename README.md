@@ -41,3 +41,8 @@ xdebug.collect_return=1
 xdebug.trace_format=1
 xdebug.extended_info=1
 ```
+
+set time format
+``` sh
+gsettings set com.canonical.indicator.datetime time-format custom && gsettings set com.canonical.indicator.datetime custom-time-format "%Y-%m-%d %H:%M:%S"
+```
