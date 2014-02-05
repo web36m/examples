@@ -13,6 +13,7 @@ app.set('views', path.join(__dirname, 'dev'));
 app.engine('php', phpExpress.engine);
 app.set('view engine', 'php');
 app.use(app.router);
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.all(/.+\.php$/, phpExpress.router);
 http.createServer(app).listen(app.get('port'));
