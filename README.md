@@ -46,3 +46,8 @@ set time format
 ``` sh
 gsettings set com.canonical.indicator.datetime time-format custom && gsettings set com.canonical.indicator.datetime custom-time-format "%Y-%m-%d %H:%M:%S"
 ```
+
+compile nginx    
+``` sh
+./configure --sbin-path=/usr/local/nginx/nginx --conf-path=/usr/local/nginx/nginx.conf --pid-path=/var/run/nginx.pid --with-http_ssl_module --with-pcre=./pcre-8.34 --with-zlib=./zlib-1.2.8
+```
