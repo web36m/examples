@@ -49,5 +49,12 @@ gsettings set com.canonical.indicator.datetime time-format custom && gsettings s
 
 compile nginx    
 ``` sh
-./configure --sbin-path=/usr/sbin/nginx --conf-path=/etc/nginx/nginx.conf --pid-path=/var/run/nginx.pid --with-http_ssl_module --with-pcre=./pcre-8.34 --with-zlib=./zlib-1.2.8
+wget http://downloads.sourceforge.net/pcre/pcre-8.34.tar.bz2
+wget http://zlib.net/zlib-1.2.8.tar.gz
+wget http://nginx.org/download/nginx-1.5.10.tar.gz
+tar xvjf pcre-8.34.tar.bz2
+tar xvfz zlib-1.2.8.tar.gz
+tar xvfz nginx-1.5.10.tar.gz
+cd nginx-1.5.10
+./configure --sbin-path=/usr/sbin/nginx --conf-path=/etc/nginx/nginx.conf --pid-path=/var/run/nginx.pid --with-http_ssl_module --with-pcre=../pcre-8.34 --with-zlib=../zlib-1.2.8
 ```
