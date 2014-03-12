@@ -65,3 +65,8 @@ cd nginx-1.5.10
 make
 make install
 ```
+
+ID3 tags all edit
+``` sh
+for i in *.mp3; do eyeD3 -a 'ArtistName' "$i"; done
+```
