@@ -70,3 +70,8 @@ ID3 tags all edit
 ``` sh
 for i in *.mp3; do eyeD3 -a 'ArtistName' "$i"; done
 ```
+
+Translate file
+``` sh
+msgfmt -cv -o domain-ru_RU.mo domain-ru_RU.po
+```
