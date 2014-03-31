@@ -4,6 +4,8 @@
 listen in terminal linux
 $ apt-get install socket
 $ socket -sl 91195
+use
+__log($_POST, $_GET);
  */
 
 function __log(){
