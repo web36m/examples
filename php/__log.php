@@ -8,10 +8,12 @@ use
 __log($_POST, $_GET);
  */
 
+
+$socket = socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
+socket_connect($socket, 'localhost', 91195);
 function __log(){
+	global $socket;
 	$args = func_get_args();
-	$socket = socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
-	socket_connect($socket, 'localhost', 91195);
 	$result = '';
 	foreach ($args as $dump) {
 		$result .= PHP_EOL;
