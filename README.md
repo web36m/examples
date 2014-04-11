@@ -75,3 +75,7 @@ Translate file
 ``` sh
 msgfmt -cv -o domain-ru_RU.mo domain-ru_RU.po
 ```
+
+``` sh
+export PS1="\[\033[1;34m\][\[\033[0m\]\t\[\033[1;30m\] \[\033[34m\]\W\[\033[1;34m\]]\[\033[32;1m\]:>\[\033[0m\] "
+```
