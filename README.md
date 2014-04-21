@@ -80,3 +80,7 @@ msgfmt -cv -o domain-ru_RU.mo domain-ru_RU.po
 ``` sh
 PS1="\[\033[1;34m\][\[\033[0m\]\t\[\033[1;30m\] \[\033[34m\]\W\[\033[1;34m\]]\[\033[32;1m\]:>\[\033[0m\] "
 ```
+exmple qemu    
+``` sh
+qemu --enable-kvm -boot d image.vdi -m 1000 -redir tcp:80::80
+```
