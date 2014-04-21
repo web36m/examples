@@ -84,3 +84,7 @@ exmple qemu
 ``` sh
 qemu --enable-kvm -boot d image.vdi -m 1000 -redir tcp:80::80
 ```
+cut ffmpeg    
+``` sh
+ffmpeg -ss 00:02:15 -t 00:00:25 -i input.mov -vcodec copy -acodec copy out.mov
+```
