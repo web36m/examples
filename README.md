@@ -90,5 +90,5 @@ ffmpeg -ss 00:02:15 -t 00:00:25 -i input.mov -vcodec copy -acodec copy out.mov
 ```
 curl ftp put file    
 ``` sh
-curl -T filename ftp://hostname --user user:password
+curl -T filename ftp://hostname --user username:password || while ! curl -C- -T filename ftp://hostname --user username:password ; do true ; done
 ```
