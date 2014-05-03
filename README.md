@@ -47,6 +47,11 @@ set time format
 gsettings set com.canonical.indicator.datetime time-format custom && gsettings set com.canonical.indicator.datetime custom-time-format "%Y-%m-%d %H:%M:%S"
 ```
 
+buttons on the right    
+``` sh
+gconftool-2 --set /apps/metacity/general/button_layout --type string "menu:minimize,maximize,close"
+```
+
 compile nginx    
 ``` sh
 wget http://downloads.sourceforge.net/pcre/pcre-8.34.tar.bz2
