@@ -1,11 +1,10 @@
-examples
+Справочник
 ========
-my examples
 
-install php-fpm
+### Установка php-fpm
 `apt-get install php5-cli php5-common php5-mysql php5-suhosin php5-gd php5-fpm php5-cgi php-pear php5-mcrypt`
 
-sublime text    
+### Моя конфигурация редактора sublime_text
 ```json
 {
 	"color_scheme": "Packages/Color Scheme - Default/Twilight.tmTheme",
@@ -20,7 +19,7 @@ sublime text
 apt-get install php5-xdebug
 nano /etc/php5/conf.d/xdebug.ini
 ```
-insert config into xdebug.ini    
+Вставить в конфигурацию xdebug.ini    
 ```
 xdebug.max_nesting_level=1000 ; the default nesting level of 100 isn't very mediawiki friendly
 xdebug.show_mem_delta=1
@@ -42,17 +41,18 @@ xdebug.trace_format=1
 xdebug.extended_info=1
 ```
 
-set time format
+### Изменения формата часов для GNOME2 Ubuntu
 ``` sh
 gsettings set com.canonical.indicator.datetime time-format custom && gsettings set com.canonical.indicator.datetime custom-time-format "%Y-%m-%d %H:%M:%S"
 ```
 
-buttons on the right    
+### Сделать кнопки управления окном справа в GNOME2 Ubuntu    
 ``` sh
 gconftool-2 --set /apps/metacity/general/button_layout --type string "menu:minimize,maximize,close"
 ```
 
-compile nginx    
+### Сборка Nginx
+(по моему сейчас проблема с http_ssl_module)    
 ``` sh
 wget http://downloads.sourceforge.net/pcre/pcre-8.34.tar.bz2
 wget http://zlib.net/zlib-1.2.8.tar.gz
@@ -71,29 +71,29 @@ make
 make install
 ```
 
-ID3 tags all edit
+### Изменение ID3 тэгов для mp3 файлов для всей папки
 ``` sh
 for i in *.mp3; do eyeD3 -a 'ArtistName' "$i"; done
 ```
 
-Translate file
+### Компиляция исходников локализации
 ``` sh
 msgfmt -cv -o domain-ru_RU.mo domain-ru_RU.po
 ```
 
-.bashrc
+### Оформление терминала (ред .bashrc)
 ``` sh
 PS1="\[\033[1;34m\][\[\033[0m\]\t\[\033[1;30m\] \[\033[34m\]\W\[\033[1;34m\]]\[\033[32;1m\]:>\[\033[0m\] "
 ```
-exmple qemu    
+### Виртуальная машина qemu    
 ``` sh
 qemu --enable-kvm -boot d image.vdi -m 1000 -redir tcp:80::80
 ```
-cut ffmpeg    
+### Вырезать кусок видео при помощи ffmpeg    
 ``` sh
 ffmpeg -ss 00:02:15 -t 00:00:25 -i input.mov -vcodec copy -acodec copy out.mov
 ```
-curl ftp put file    
+### Отправка файла по ftp через curl
 ``` sh
 curl -T filename ftp://hostname --user username:password || while ! curl -C- -T filename ftp://hostname --user username:password ; do true ; done
 ```
