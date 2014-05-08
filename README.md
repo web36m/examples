@@ -97,3 +97,20 @@ ffmpeg -ss 00:02:15 -t 00:00:25 -i input.mov -vcodec copy -acodec copy out.mov
 ``` sh
 curl -T filename ftp://hostname --user username:password || while ! curl -C- -T filename ftp://hostname --user username:password ; do true ; done
 ```
+### Работа с архивами
+создать .tar.gz    
+``` sh
+tar -czvf file.tar.gz /full/path
+```
+создать .tar.bz2    
+``` sh
+tar -cjvf file.tar.bz2 /full/path
+```
+распаковать tar.gz    
+``` sh
+tar -xvf file.tar.gz -C /full/path
+```
+распаковать tar.bz2    
+``` sh
+tar -xvjf file.tar.bz2 -C /full/path
+```
