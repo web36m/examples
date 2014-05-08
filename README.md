@@ -114,3 +114,32 @@ tar -xvf file.tar.gz -C /full/path
 ``` sh
 tar -xvjf file.tar.bz2 -C /full/path
 ```
+### Работа с базой из командной строки
+установка    
+``` sh
+apt-get install mysql-server
+```
+подключение с запросом пароля    
+``` sh
+mysql -u root -p
+```
+создание базы    
+``` sql
+create database basename;
+```
+создание пользователя    
+``` sql
+grant usage on *.* to baseuser@localhost identified by 'userpasswd';
+```
+установка привилегий пользователя    
+``` sql
+grant all privileges on basename.* to baseuser@localhost;
+```
+импорт из файла в базу    
+``` sh
+mysql -u root -p basename < basename.sql
+```
+экспорт из базы в файл    
+``` sh
+mysqldump -u root -p basename > basename.sql
+```
