@@ -167,3 +167,4 @@ emerge --ask kdebase-meta
 ---------
 emerge -uavDN world
 ```
+goto http://wiki.gentoo.org/wiki/KDE/ru
